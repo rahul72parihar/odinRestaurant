@@ -8,7 +8,7 @@ function renderPage(section) {
   const contentContainer = document.createElement("div");
 
   contentContainer.appendChild(topSection());
-  contentContainer.appendChild(buttonSection());
+  contentContainer.appendChild(buttonSection(section));
   const sectionToRender =
     section === "homepage" ? homepageSection() : menuSection();
   contentContainer.appendChild(sectionToRender);

@@ -9,6 +9,8 @@ body {
   font-family: "Inter", sans-serif;
   color: white;
   text-shadow: 0 0 5px black;
+  text-align: center;
+  overflow-y: hidden;
 }
 #content {
   display: flex;
@@ -19,15 +21,18 @@ body {
 /*TOP SECTION*/
 .top {
   background: url("https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
-  filter: grayscale(50%);
+  filter: grayscale(60%);
   background-size: cover;
   height: 50vh;
-  width: 100vw;
+  width: 99vw;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   text-shadow: 0 0 5px black;
+  border-radius: 20px;
+  border: 1px solid white;
+  margin: 0 auto;
 }
 /*BUTTON SECTION*/
 .button-container {
@@ -45,5 +50,57 @@ body {
   border-radius: 10px;
   height: 50px;
   width: 120px;
+  transition: 0.3s;
 }
-/*HOME AND MENU SECTION*/
+.button-container > .selected-btn {
+  color: #121212;
+  background-color: greenyellow;
+  border-color: #121212;
+}
+.button-container > button:hover {
+  transform: scale(1.1);
+}
+/*HOME SECTION*/
+.home-container {
+  background: url(https://images.unsplash.com/photo-1594007654729-407eedc4be65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=728&q=80);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+/* MENU SECTION */
+.menu-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/* MENU > CARD CONTAINER */
+.card-container {
+  width: 200px;
+  background-color: rgba(240, 248, 255, 0.199);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  text-align: center;
+}
+.card-container > img {
+  width: 90%;
+  height: 180px;
+}
+.green-text {
+  color: greenyellow;
+}
