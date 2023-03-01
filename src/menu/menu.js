@@ -1,5 +1,12 @@
+import { menuData } from "./menuData";
+import itemCard from "./itemCard";
 export default function () {
-  const element = document.createElement("h1");
-  element.textContent = "MENU";
-  return element;
+  const menuContainer = document.createElement("div");
+  menuContainer.classList.add("menu-container");
+
+  menuData.forEach((item) => {
+    menuContainer.appendChild(itemCard(item));
+  });
+
+  return menuContainer;
 }
